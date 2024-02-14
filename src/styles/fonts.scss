@@ -27,40 +27,52 @@ $breakpoint-4k: 2560px;
 
 @font-face {
   font-family: PoppinsLight;
-  src: url("../assets/fonts/Poppins/Poppins-Light.ttf");
+  src: url("./assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  font-style: normal;
 }
 
 @font-face {
   font-family: PoppinsRegular;
-  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf");
+  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-style: normal;
 }
 
 @font-face {
   font-family: PoppinsMedium;
-  src: url("../assets/fonts/Poppins/Poppins-Medium.ttf");
+  src: url("./assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-style: normal;
 }
 
 @font-face {
   font-family: PoppinsSemibold;
-  src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf");
+  src: url("./assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-style: normal;
 }
 
 @font-face {
   font-family: PoppinsBold;
-  src: url("../assets/fonts/Poppins/Poppins-Bold.ttf");
+  src: url("./assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
   font-family: PoppinsExtrabold;
-  src: url("../assets/fonts/Poppins/Poppins-ExtraBold.ttf");
+  src: url("./assets/fonts/Poppins/Poppins-ExtraBold.ttf") format("truetype");
+  font-style: normal;
 }
 
 @font-face {
   font-family: FiraMonoRegular;
-  src: url("../assets/fonts/FiraMono/FiraMono-Regular.ttf");
+  src: url("./assets/fonts/FiraMono/FiraMono-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: FiraMonoBold;
-  src: url("../assets/fonts/FiraMono/FiraMono-Bold.ttf");
+  src: url("./assets/fonts/FiraMono/FiraMono-Bold.ttf") format("truetype");
+}
+
+h1 {
+  font-family: PoppinsBold, sans-serif;
+  @include responsive-font-size(72px, 58px, 45px);
 }
