@@ -4,7 +4,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-export default function HelloBanner() {
+export default function HelloBanner({ id }: { id: string }) {
   const icons = [
     {
       id: 1,
@@ -17,7 +17,7 @@ export default function HelloBanner() {
   ];
 
   return (
-    <div className="container" id="hello">
+    <div className="container" id={id}>
       <main className="presentation">
         <h3>Hi there, I'm</h3>
         <h2>Luís M. Colombo</h2>
