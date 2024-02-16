@@ -76,3 +76,34 @@ h1 {
   font-family: PoppinsBold, sans-serif;
   @include responsive-font-size(72px, 58px, 45px);
 }
+
+h2 {
+  font-family: PoppinsSemibold, sans-serif;
+  @include responsive-font-size(48px, 36px, 28px);
+}
+
+h3 {
+  font-family: PoppinsMedium, sans-serif;
+  @include responsive-font-size(36px, 28px, 24px);
+
+  &.fira-mono {
+    font-family: FiraMonoRegular, monospace;
+    @include responsive-font-size(36px, 28px, 24px);
+  }
+}
+
+h4 {
+  font-family: PoppinsRegular, sans-serif;
+  @include responsive-font-size(28px, 24px, 20px);
+}
+
+p {
+  font-family: PoppinsLight, sans-serif;
+  @include responsive-font-size(20px, 18px, 16px);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  font-family: PoppinsRegular;
+}
