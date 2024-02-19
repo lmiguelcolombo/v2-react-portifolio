@@ -6,12 +6,16 @@ type NavbarProps = {
 };
 
 export default function Navbar({ links }: NavbarProps) {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
   return (
     <Container>
       <div className="nav-container">
-        <h1>
-          <a href="#hello">LC</a>
-        </h1>
+        <button className="button-to-top" onClick={() => scrollToTop()}>
+          <h1>LC</h1>
+        </button>
         <div className="nav-items-wrapper">
           {links.map((link) => {
             return (
