@@ -1,9 +1,4 @@
-import {
-  faGithub,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import { faArrowDown, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Container from "../Container";
 import "./Hello.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,17 +9,6 @@ type HelloProps = {
 };
 
 export default function HelloBanner({ id, to }: HelloProps) {
-  const icons = [
-    {
-      id: 1,
-      to: "https://linkedin.com/in/luis-miguel-colombo",
-      icon: faLinkedin,
-    },
-    { id: 2, to: "https://github.com/lmiguelcolombo", icon: faGithub },
-    { id: 3, to: "mailto:lmiguelcolombo@gmail.com", icon: faEnvelope },
-    { id: 4, to: "https://instagram.com/colomboluismiguel", icon: faInstagram },
-  ];
-
   return (
     <Container>
       <div className="hello-container" id={id}>
