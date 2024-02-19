@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
 
-  padding: 0 300px;
-  gap: 100px;
+  padding-left: 300px;
+  gap: 60px;
 
   .image-social {
     display: flex;
@@ -42,10 +42,17 @@
     }
   }
 
-  .text {
-    .fira-mono {
-      color: $blue;
+  .text-box {
+    width: 1048px;
+    height: 705px;
+    padding: 55px 66px;
+    background-color: $blue;
+    color: $white;
+    .section-title {
       margin-bottom: 12px;
+    }
+    .about-description {
+      width: 692px;
     }
   }
 }
