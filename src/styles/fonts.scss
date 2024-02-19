@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+html body {
+  background-color: $white;
+}
+
 $breakpoint-xs: 320px;
 $breakpoint-sm: 480px;
 $breakpoint-md: 768px;
