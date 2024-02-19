@@ -1,0 +1,23 @@
+.hello-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 300px;
+  padding: 0 300px;
+  gap: 300px;
+
+  .btn-filled-blue {
+    align-self: center;
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    background-color: $light-blue;
+    border: 0;
+    border-radius: 5px;
+
+    .a-text-white {
+      color: $white;
+    }
+  }
+}

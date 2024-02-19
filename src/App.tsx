@@ -1,9 +1,19 @@
 import "./App.scss";
+import HelloBanner from "./components/Hello";
+import Navbar from "./components/Navbar";
 
 function App() {
+  const links = [
+    { id: "about-link", to: "#about", label: "About" },
+    { id: "experience-link", to: "#experience", label: "Experience" },
+    { id: "projects-link", to: "#projects", label: "Projects" },
+    { id: "contact-link", to: "#contact", label: "Contact" },
+  ];
+
   return (
     <>
-      <h1>This is my portifolio!</h1>
+      <Navbar links={links} />
+      <HelloBanner id="hello" to="#about" />
     </>
   );
 }
