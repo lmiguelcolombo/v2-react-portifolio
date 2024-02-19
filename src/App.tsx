@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Navbar links={links} />
-      <HelloBanner id="hello" />
+      <HelloBanner id="hello" to="#about" />
     </>
   );
 }
