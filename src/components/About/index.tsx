@@ -39,9 +39,9 @@ export default function About({ id }: { id: string }) {
             })}
           </ul>
         </div>
-        <div className="text">
-          <h2 className="fira-mono">Who am I?</h2>
-          <p>
+        <div className="text-box">
+          <h2 className="section-title">Who am I?</h2>
+          <p className="about-description">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis,
             commodi quisquam. In, officiis. Amet sunt quis repellat
             exercitationem iusto laudantium voluptatem numquam labore,
