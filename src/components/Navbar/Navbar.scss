@@ -6,10 +6,15 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  background-color: $white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-  h1 a[href="#hello"] {
+  .button-to-top {
+    border: none;
+    background-color: none;
+    height: 100px;
     color: $blue;
+    cursor: pointer;
   }
 
   .nav-items-wrapper {

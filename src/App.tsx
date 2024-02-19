@@ -1,4 +1,5 @@
 import "./App.scss";
+import About from "./components/About";
 import HelloBanner from "./components/Hello";
 import Navbar from "./components/Navbar";
 
@@ -14,6 +15,7 @@ function App() {
     <>
       <Navbar links={links} />
       <HelloBanner id="hello" to="#about" />
+      <About id="about" />
     </>
   );
 }

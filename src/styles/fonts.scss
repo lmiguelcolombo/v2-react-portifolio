@@ -6,8 +6,11 @@
   padding: 0;
 }
 
-html body {
-  background-color: $white;
+html {
+  scroll-behavior: smooth;
+  body {
+    background-color: $white;
+  }
 }
 
 $breakpoint-xs: 320px;
@@ -84,6 +87,11 @@ h1 {
 h2 {
   font-family: PoppinsSemibold, sans-serif;
   @include responsive-font-size(48px, 36px, 28px);
+
+  &.fira-mono {
+    font-family: FiraMonoBold, monospace;
+    @include responsive-font-size(36px, 28px, 24px);
+  }
 }
 
 h3 {
