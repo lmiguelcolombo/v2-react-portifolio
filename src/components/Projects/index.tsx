@@ -1,6 +1,6 @@
 import useRepos from "../../utils/githubApi";
 import ProjectCard from "./ProjectCard";
-import "./ProjectCard.scss";
+import "./Projects.scss";
 
 type ProjectsProps = {
   sectionId: string;
