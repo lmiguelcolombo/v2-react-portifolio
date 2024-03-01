@@ -1,5 +1,6 @@
 import useRepos from "../../utils/githubApi";
 import ProjectCard from "./ProjectCard";
+import "./ProjectCard.scss";
 
 type ProjectsProps = {
   sectionId: string;
@@ -10,12 +11,19 @@ export default function Projects({ sectionId }: ProjectsProps) {
 
   return (
     <section className="projects-container" id={sectionId}>
-      <h1>Projects</h1>
-      {repos.map((repo) => {
-        const title = repo.name.split("-").join(" ");
+      <h1 className="projects-section-title">Projects</h1>
+      {repos.map((repo, index) => {
+        const title = repo.name
+          .split("-")
+          .map((word) => {
+            return word[0].toUpperCase() + word.substring(1);
+          })
+          .join(" ");
+
         if (repo.name != "AdmFin")
           return (
             <ProjectCard
+              className={`${index % 2 === 0 && "reverse"}`}
               id={repo.id}
               image={`/src/assets/images/${repo.name}.webp`}
               imageAlt={repo.name}
