@@ -10,6 +10,7 @@ type ProjectCardProps = {
   description: string;
   linkToGithub: string;
   liveProject: string;
+  className: string;
 };
 
 export default function ProjectCard({
@@ -20,18 +21,23 @@ export default function ProjectCard({
   description,
   linkToGithub,
   liveProject,
+  className,
 }: ProjectCardProps) {
   return (
-    <div className="project-card" key={id}>
-      <div className="image">
+    <div className={`project-card ${className}`} key={id}>
+      <div className={`image ${className}`}>
         <img src={image} alt={imageAlt} />
       </div>
-      <div className="description">
+      <div className={`description ${className}`}>
         <h4>{title}</h4>
         <p>{description}</p>
         <div className="project-navigation-links">
-          <IconAnchor icon={faGithub} to={linkToGithub} />
-          <IconAnchor icon={faArrowUpRightFromSquare} to={liveProject} />
+          <IconAnchor icon={faGithub} size="3x" to={linkToGithub} />
+          <IconAnchor
+            icon={faArrowUpRightFromSquare}
+            size="3x"
+            to={liveProject}
+          />
         </div>
       </div>
     </div>
