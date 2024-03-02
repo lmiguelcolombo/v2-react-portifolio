@@ -1,0 +1,60 @@
+.experience-container {
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  padding-left: 250px;
+  padding-right: 250px;
+
+  .timeline {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+
+    .line {
+      height: 100%;
+      width: 2px;
+      background: #3c3d49;
+      border-radius: 50px;
+    }
+
+    .milestones-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .milestone {
+        display: flex;
+        align-items: center;
+
+        .horizontal-line {
+          width: 200px;
+          height: 2px;
+          background: #3c3d49;
+        }
+
+        .circle {
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+          background: $light-blue;
+          margin-right: 10px;
+        }
+
+        .content {
+          padding: 10px;
+          border-radius: 5px;
+
+          .profession-title {
+            font-family: "PoppinsBold";
+          }
+          span.company {
+            font-family: "PoppinsSemibold";
+            color: $gold;
+          }
+          .duration {
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+}
