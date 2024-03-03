@@ -22,6 +22,13 @@ const Timeline = () => {
       title: "FrontEnd Developer",
       company: "Nexalure",
       startEndDates: "Jan 2024 - Present",
+      description: [
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
+      ],
     },
     {
       title: "Full-Stack & BI Developer",
@@ -34,18 +41,39 @@ const Timeline = () => {
       <div className="line"></div>
       <div className="milestones-wrapper">
         {milestones.map((milestone, index) => (
-          <div key={index} className="milestone">
-            <div className="horizontal-line"></div>
-            <div className="circle"></div>
-            <div className="content">
-              <p className="profession-title">{milestone.title}</p>
-              <p>
-                @ <span className="company">{milestone.company}</span>
-              </p>
-              <p className="duration">{milestone.startEndDates}</p>
-            </div>
+          <div className="milestone-with-li">
+            <Milestone milestone={milestone} index={index} />
+            <ol>
+              {milestone.description?.map((item, index) => (
+                <li key={index}>
+                  <p>{item}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         ))}
+      </div>
+    </div>
+  );
+};
+
+const Milestone = ({
+  milestone,
+  index,
+}: {
+  milestone: { title: string; company: string; startEndDates: string };
+  index: number;
+}) => {
+  return (
+    <div key={index} className="milestone">
+      <div className="horizontal-line"></div>
+      <div className="circle"></div>
+      <div className="content">
+        <p className="profession-title">{milestone.title}</p>
+        <p>
+          @ <span className="company">{milestone.company}</span>
+        </p>
+        <p className="duration">{milestone.startEndDates}</p>
       </div>
     </div>
   );
