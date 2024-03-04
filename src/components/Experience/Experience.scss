@@ -1,0 +1,98 @@
+.experience-container {
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  padding-left: 250px;
+  padding-right: 250px;
+
+  .timeline {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 60px;
+
+    .line {
+      animation: growLine 2s forwards;
+      height: 100%;
+      width: 6px;
+      background: #3c3d49;
+      border-radius: 50px;
+    }
+
+    .milestones-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+
+      .milestone-with-li {
+        display: flex;
+        // justify-content: space-between;
+
+        ol {
+          margin-top: 120px;
+          margin-left: 30px;
+
+          p {
+            @include responsive-font-size(16px, 12px, 10px);
+          }
+        }
+      }
+
+      .milestone {
+        display: flex;
+        align-items: center;
+        align-self: flex-start;
+        flex-shrink: 0;
+
+        .horizontal-line {
+          width: 200px;
+          animation: growMilestoneLine 2s forwards;
+          height: 2px;
+          background: #3c3d49;
+        }
+
+        .circle {
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+          background: $light-blue;
+          margin-right: 10px;
+        }
+
+        .content {
+          padding: 10px;
+          border-radius: 5px;
+
+          .profession-title {
+            font-family: "PoppinsBold";
+          }
+          span.company {
+            font-family: "PoppinsSemibold";
+            color: $gold;
+          }
+          .duration {
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes growLine {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes growMilestoneLine {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 200px;
+  }
+}

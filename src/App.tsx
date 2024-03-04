@@ -3,6 +3,7 @@ import About from "./components/About";
 import HelloBanner from "./components/Hello";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 
 function App() {
   const links = [
@@ -18,6 +19,7 @@ function App() {
       <HelloBanner id="hello" to="#about" />
       <About id="about" />
       <Projects sectionId="projects" />
+      <Experience sectionId="experience" />
     </>
   );
 }

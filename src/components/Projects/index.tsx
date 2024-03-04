@@ -13,7 +13,7 @@ export default function Projects({ sectionId }: ProjectsProps) {
   return (
     <Container>
       <section className="projects-container" id={sectionId}>
-        <h1 className="projects-section-title">Projects</h1>
+        <h1 className="section-title">Projects</h1>
         {repos.map((repo, index) => {
           const title = repo.name
             .split("-")
