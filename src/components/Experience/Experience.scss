@@ -12,6 +12,7 @@
     padding-top: 60px;
 
     .line {
+      animation: growLine 2s forwards;
       height: 100%;
       width: 6px;
       background: #3c3d49;
@@ -45,6 +46,7 @@
 
         .horizontal-line {
           width: 200px;
+          animation: growMilestoneLine 2s forwards;
           height: 2px;
           background: #3c3d49;
         }
@@ -74,5 +76,23 @@
         }
       }
     }
+  }
+}
+
+@keyframes growLine {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes growMilestoneLine {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 200px;
   }
 }

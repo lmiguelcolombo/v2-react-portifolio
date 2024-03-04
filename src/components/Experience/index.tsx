@@ -1,4 +1,5 @@
 // import Container from "../Container";
+import { useRef } from "react";
 import "./Experience.scss";
 
 type ExperienceProps = {
@@ -34,6 +35,13 @@ const Timeline = () => {
       title: "Full-Stack & BI Developer",
       company: "Academia da Web",
       startEndDates: "Jan 2020 - Jan 2024",
+      description: [
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
+      ],
     },
   ];
   return (
