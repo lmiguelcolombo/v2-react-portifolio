@@ -6,15 +6,6 @@
   align-items: center;
   gap: 60px;
 
-  .projects-section-title {
-    text-align: center;
-    background: #4d93a9;
-    background: linear-gradient(to right, #4d93a9 0%, #255c99 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
   .project-card {
     width: 1200px;
     height: 400px;
