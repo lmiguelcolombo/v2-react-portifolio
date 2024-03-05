@@ -1,5 +1,5 @@
-// import Container from "../Container";
-import { useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 import "./Experience.scss";
 
 type ExperienceProps = {
@@ -24,11 +24,11 @@ const Timeline = () => {
       company: "Nexalure",
       startEndDates: "Jan 2024 - Present",
       description: [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
+        "Proficiently utilized a tech stack based on React, Redux, TypeScript, JavaScript, Next, Node, SCSS, and Git to deliver high-quality applications.",
+        "Have shown leadership by taking on responsibilities, and being available to help and guide teammates, especially in Git and in the application's tech stack.",
+        "Actively engaged in code reviews and pair-programming within an international team of 8 people, sharing valuable thoughts and different ways to solve problems based on design principles, React core concepts, and UX principles.",
+        "Became actively involved in the Agile environment, task estimations, sprint planning, standup meetings, and sprint retrospectives.",
+        "Facilitated collaborative problem-solving in a large team setting, effectively addressing issues through clear and specific communication strategies.",
       ],
     },
     {
@@ -36,11 +36,10 @@ const Timeline = () => {
       company: "Academia da Web",
       startEndDates: "Jan 2020 - Jan 2024",
       description: [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio doloremque enim consectetur porro aliquid soluta perspiciatis reprehenderit numquam placeat aspernatur, rerum perferendis quo, eaque, expedita quae eius quidem dolorum!",
+        "Built ReactJS Single Page Applications (SPAs) using JavaScript, TypeScript, CSS, and Git for code versioning.",
+        "Collaborated with the UI/UX design team, building responsive and modern pages with Figma.",
+        "Utilized, with expertise, a tech stack that relied on Laravel (PHP), Bootstrap, MySQL, Docker, Git, and GitHub Actions to deploy, delivering a highly qualified application of charts and dashboards.",
+        "Developed Power BI dashboards importing data from other datasets, integrating with PowerPoint's designs.",
       ],
     },
   ];
@@ -51,9 +50,18 @@ const Timeline = () => {
         {milestones.map((milestone, index) => (
           <div className="milestone-with-li">
             <Milestone milestone={milestone} index={index} />
-            <ol>
+            <ol
+              className={milestone.company.toLowerCase().split(" ").join("-")}
+            >
               {milestone.description?.map((item, index) => (
                 <li key={index}>
+                  <span>
+                    <FontAwesomeIcon
+                      icon={faCode}
+                      fontSize="20px"
+                      color="#4d93a9"
+                    />
+                  </span>
                   <p>{item}</p>
                 </li>
               ))}

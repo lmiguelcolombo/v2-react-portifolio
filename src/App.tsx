@@ -8,8 +8,8 @@ import Experience from "./components/Experience";
 function App() {
   const links = [
     { id: "about-link", to: "#about", label: "About" },
-    { id: "experience-link", to: "#experience", label: "Experience" },
     { id: "projects-link", to: "#projects", label: "Projects" },
+    { id: "experience-link", to: "#experience", label: "Experience" },
     { id: "contact-link", to: "#contact", label: "Contact" },
   ];
 
