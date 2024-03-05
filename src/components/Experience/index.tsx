@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Experience.scss";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
+import "./Experience.scss";
 
 type ExperienceProps = {
   sectionId: string;
