@@ -42,14 +42,22 @@ export default function About({ id }: { id: string }) {
         <div className="text-box">
           <h2 className="section-title">Who am I?</h2>
           <p className="about-description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-            commodi quisquam. In, officiis. Amet sunt quis repellat
-            exercitationem iusto laudantium voluptatem numquam labore,
-            perferendis at! Provident laborum rem amet quisquam. Lorem, ipsum
-            dolor sit amet consectetur adipisicing elit. Nobis, commodi
-            quisquam. In, officiis. Amet sunt quis repellat exercitationem iusto
-            laudantium voluptatem numquam labore, perferendis at! Provident
-            laborum rem amet quisquam.
+            I'm a ReactJS-focused developer with 4 years of professional
+            experience in JavaScript and TypeScript. I have a strong passion for
+            full-stack (f/e) development! 💻
+            <br />
+            <br />
+            Currently, I am an integral part of a dynamic international team
+            consisting of 8 talented individuals. My expertise lies in finding
+            innovative solutions to complex problems, making me the go-to person
+            on the team. 💡
+            <br />
+            <br />
+            Additionaly, my thirst for knowledge has led me to explore different
+            seas. I am constantly seeking new challenges and opportunities for
+            continuous learning, growth, and improvement. Moreover, I thrive in
+            collaborative team environments and am eager to contribute my
+            expertise to a top-notch team! 🚀
           </p>
         </div>
       </section>
