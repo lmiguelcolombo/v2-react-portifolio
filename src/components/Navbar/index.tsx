@@ -14,7 +14,13 @@ export default function Navbar({ links }: NavbarProps) {
     <Container>
       <div className="nav-container">
         <button className="button-to-top" onClick={() => scrollToTop()}>
-          <h1>LC</h1>
+          {/* <h1> */}
+          <img
+            src="/src/assets/logo.jpeg"
+            alt=""
+            style={{ width: "100px", height: "100px" }}
+          />
+          {/* </h1> */}
         </button>
         <div className="nav-items-wrapper">
           {links.map((link) => {
