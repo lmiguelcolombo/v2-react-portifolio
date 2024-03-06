@@ -8,6 +8,7 @@
 
   .presentation {
     h1 {
+      text-align: left;
       @include responsive-font-size(120px, 58px, 45px);
       color: $blue;
     }
