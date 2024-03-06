@@ -4,6 +4,7 @@ import HelloBanner from "./components/Hello";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 
 function App() {
   const links = [
@@ -20,6 +21,9 @@ function App() {
       <About id="about" />
       <Projects sectionId="projects" />
       <Experience sectionId="experience" />
+      <Skills />
+      {/* <Contact />
+      <Footer /> */}
     </>
   );
 }
