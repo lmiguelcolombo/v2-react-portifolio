@@ -16,7 +16,7 @@ export default function HelloBanner({ id, to }: HelloProps) {
           <h3>
             Hi there <span className="waving-hand">👋🏼</span>, I'm
           </h3>
-          <h1>Luís M. Colombo</h1>
+          <h1 className="section-title">Luís M. Colombo</h1>
           <h3 className="fira-mono">A software engineer 💻</h3>
         </main>
         <button className="btn-filled-blue">
