@@ -43,7 +43,9 @@ export default function Skills() {
     <>
       <section className="resume-container">
         <h1 className="section-title">Resume</h1>
-        <a>Download CV</a>
+        <a href="/src/assets/resume.pdf" target="_blank">
+          Download CV
+        </a>
       </section>
       <section className="skills-container">
         <h1 className="section-title">Technical Skills</h1>
