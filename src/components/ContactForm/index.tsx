@@ -2,32 +2,32 @@ import {
   IconDefinition,
   faGithub,
   faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import ContactForm from "./Form";
-import "./ContactForm.scss";
-import { faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
-import IconAnchor from "../IconAnchor";
-import { SizeProp } from "@fortawesome/fontawesome-svg-core";
+} from '@fortawesome/free-brands-svg-icons';
+import ContactForm from './Form';
+import './ContactForm.scss';
+import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
+import IconAnchor from '../IconAnchor';
+import { SizeProp } from '@fortawesome/fontawesome-svg-core';
 
 export default function Contact({ sectionId }: { sectionId: string }) {
   const personalInfo = [
     {
-      link: "https://maps.app.goo.gl/PAibJGS2Eyx6Cj4A6",
+      link: 'https://maps.app.goo.gl/PAibJGS2Eyx6Cj4A6',
       icon: faMapMarkedAlt,
-      size: "1x" as SizeProp,
-      text: "Canela, RS, Brazil",
+      size: '2x' as SizeProp,
+      text: 'Canela, RS, Brazil',
     },
     {
-      link: "https://github.com/lmiguelcolombo",
+      link: 'https://github.com/lmiguelcolombo',
       icon: faGithub,
-      size: "1x" as SizeProp,
-      text: "@lmiguelcolombo",
+      size: '2x' as SizeProp,
+      text: '@lmiguelcolombo',
     },
     {
-      link: "https://linkedin.com/in/luis-miguel-colombo",
+      link: 'https://linkedin.com/in/luis-miguel-colombo',
       icon: faLinkedin,
-      size: "1x" as SizeProp,
-      text: "/luis-miguel-colombo",
+      size: '2x' as SizeProp,
+      text: '/luis-miguel-colombo',
     },
   ];
 

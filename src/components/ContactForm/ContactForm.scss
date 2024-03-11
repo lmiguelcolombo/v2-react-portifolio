@@ -1,0 +1,132 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+
+  .contact-wrapper {
+    width: 80%;
+    height: 622px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 92px;
+    background-color: #fff;
+    border-radius: 10px;
+
+    .info {
+      width: 45%;
+      height: 100%;
+      padding: 62px;
+      background-color: $blue;
+      border-radius: 10px;
+      color: $white;
+
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+
+      .personal-info {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .icon-with-text {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+
+          .icon-anchor {
+            color: $gold;
+            transition: font-size 0.2s linear;
+
+            &:hover {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      margin-right: 60px;
+      align-self: center;
+      gap: 40px;
+
+      .input {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        &:focus,
+        &:focus-within {
+          label {
+            color: $gold;
+          }
+          input {
+            border-bottom: 1px solid $gold;
+          }
+        }
+
+        label {
+          color: $blue;
+          font-family: 'PoppinsBold', sans-serif;
+          transition: color 0.2s linear;
+        }
+
+        input {
+          border-bottom: 1px solid $blue;
+          border-top: none;
+          border-right: none;
+          border-left: none;
+          padding: 5px;
+          outline: none;
+          transition: border-bottom 0.3s linear;
+        }
+
+        textarea {
+          height: 215px;
+          padding: 20px;
+          resize: none;
+          border: 1px solid $blue;
+          border-radius: 5px;
+          outline: none;
+          transition: border 0.3s linear;
+
+          &:focus,
+          &:focus-within {
+            border: 1px solid $gold;
+          }
+        }
+
+        input,
+        textarea {
+          font-family: 'PoppinsRegular', sans-serif;
+          font-size: 16px;
+        }
+      }
+
+      .btn-filled-blue {
+        align-self: center;
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        font-family: 'PoppinsBold', sans-serif;
+        color: $white;
+        border: 0;
+        background-color: $light-blue;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s linear;
+
+        &:hover,
+        &:focus {
+          background-color: $gold;
+        }
+      }
+    }
+  }
+}
