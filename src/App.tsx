@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
+import ContactForm from "./components/ContactForm/index";
 
 function App() {
   const links = [
@@ -22,8 +23,8 @@ function App() {
       <Projects sectionId="projects" />
       <Experience sectionId="experience" />
       <Skills />
-      {/* <Contact />
-      <Footer /> */}
+      <ContactForm sectionId="contact" />
+      {/* <Footer /> */}
     </>
   );
 }
