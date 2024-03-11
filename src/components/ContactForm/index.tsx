@@ -1,63 +1,80 @@
-import { useState } from "react";
+import {
+  IconDefinition,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import ContactForm from "./Form";
+import "./ContactForm.scss";
+import { faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
+import IconAnchor from "../IconAnchor";
+import { SizeProp } from "@fortawesome/fontawesome-svg-core";
 
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
-
-export default function ContactForm() {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form data:", formData);
-    // You can add your logic here to send the form data to your server or use a form handling service like Formspree or Netlify Forms
-  };
+export default function Contact({ sectionId }: { sectionId: string }) {
+  const personalInfo = [
+    {
+      link: "https://maps.app.goo.gl/PAibJGS2Eyx6Cj4A6",
+      icon: faMapMarkedAlt,
+      size: "1x" as SizeProp,
+      text: "Canela, RS, Brazil",
+    },
+    {
+      link: "https://github.com/lmiguelcolombo",
+      icon: faGithub,
+      size: "1x" as SizeProp,
+      text: "@lmiguelcolombo",
+    },
+    {
+      link: "https://linkedin.com/in/luis-miguel-colombo",
+      icon: faLinkedin,
+      size: "1x" as SizeProp,
+      text: "/luis-miguel-colombo",
+    },
+  ];
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name:</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
+    <section id={sectionId} className="contact-container">
+      <h1 className="section-title">Contact</h1>
+      <article className="contact-wrapper">
+        <div className="info">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+            deleniti cumque. Optio eius ipsam dolore tenetur maiores officia
+            quod nemo eum inventore, debitis illum aliquid tempora laudantium
+            nostrum facilis? Repellat?
+          </p>
+          <div className="personal-info">
+            {personalInfo.map((item, index) => (
+              <IconWithText
+                key={index}
+                link={item.link}
+                icon={item.icon}
+                size={item.size}
+                text={item.text}
+              />
+            ))}
+          </div>
+        </div>
+        <ContactForm />
+      </article>
+    </section>
+  );
+}
 
-      <label htmlFor="email">Email:</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-
-      <label htmlFor="message">Message:</label>
-      <textarea
-        id="message"
-        name="message"
-        value={formData.message}
-        onChange={handleChange}
-        required
-      />
-
-      <button type="submit">Submit</button>
-    </form>
+function IconWithText({
+  link,
+  icon,
+  size,
+  text,
+}: {
+  link: string;
+  icon: IconDefinition;
+  size: SizeProp;
+  text: string;
+}) {
+  return (
+    <div className="icon-with-text">
+      <IconAnchor to={link} icon={icon} size={size} />
+      <p>{text}</p>
+    </div>
   );
 }
