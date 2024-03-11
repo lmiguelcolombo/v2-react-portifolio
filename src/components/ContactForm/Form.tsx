@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from 'react';
 
 interface FormData {
@@ -23,16 +24,28 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Form data:', formData);
-    // You can add your logic here to send the form data to your server or use a form handling service like Formspree or Netlify Forms
+
+    axios
+      .post(
+        'https://getform.io/f/lbkoolpb',
+        {
+          message: formData.message,
+        },
+        { headers: { Accept: 'application/json' } }
+      )
+      .then((response) => {
+        if (!response) {
+          throw Error(
+            'Your message has not been sent. Please, try again later.'
+          );
+        }
+        alert(`Message sent successfully!`);
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
-    <form
-      // onSubmit={handleSubmit}
-      action="https://getform.io/f/lbkoolpb"
-      method="POST"
-      className="contact-form"
-    >
+    <form onSubmit={handleSubmit} method="POST" className="contact-form">
       <div className="input">
         <label htmlFor="name">Name:</label>
         <input
