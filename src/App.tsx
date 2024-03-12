@@ -1,18 +1,19 @@
-import "./App.scss";
-import About from "./components/About";
-import HelloBanner from "./components/Hello";
-import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
-import Experience from "./components/Experience";
-import Skills from "./components/Skills";
-import ContactForm from "./components/ContactForm/index";
+import './App.scss';
+import About from './components/About';
+import HelloBanner from './components/Hello';
+import Navbar from './components/Navbar';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
+import ContactForm from './components/ContactForm/index';
+import Footer from './components/Footer';
 
 function App() {
   const links = [
-    { id: "about-link", to: "#about", label: "About" },
-    { id: "projects-link", to: "#projects", label: "Projects" },
-    { id: "experience-link", to: "#experience", label: "Experience" },
-    { id: "contact-link", to: "#contact", label: "Contact" },
+    { id: 'about-link', to: '#about', label: 'About' },
+    { id: 'projects-link', to: '#projects', label: 'Projects' },
+    { id: 'experience-link', to: '#experience', label: 'Experience' },
+    { id: 'contact-link', to: '#contact', label: 'Contact' },
   ];
 
   return (
@@ -24,7 +25,7 @@ function App() {
       <Experience sectionId="experience" />
       <Skills />
       <ContactForm sectionId="contact" />
-      {/* <Footer /> */}
+      <Footer sectionId="footer" />
     </>
   );
 }
